@@ -1,0 +1,53 @@
+@import "../../assets/fonts";
+
+.customCheckbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin: 4px;
+
+  & + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #adb5bd;
+      border-radius: 0.25em;
+      margin-right: 13px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 11px 8px;
+      cursor: pointer;
+    }
+  }
+
+  &:checked + label:before {
+    border-color: #208cff;
+    background-color: #208cff;
+    background-image: url("../../../public/img/checked.svg");
+  }
+
+  &:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #b3d7ff;
+  }
+
+  &:not(:disabled):active + label::before {
+    background-color: #208cff;
+    border-color: #208cff;
+  }
+
+  &:disabled + label::before {
+    background-color: #208cff;
+  }
+}
+
+.label {
+  font-family: "Proxima Nova Rg";
+  font-size: 18px;
+  line-height: 20px;
+}

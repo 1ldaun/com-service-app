@@ -1,0 +1,130 @@
+.modal_wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(250, 251, 251, 0.95);
+  z-index: 100;
+  overflow: hidden;
+
+  .close {
+    position: absolute;
+    top: 36px;
+    left: 170px;
+    font-size: 14px;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:before {
+      display: inline-block;
+      content: '\00D7';
+      font-size: 22px;
+      font-weight: 700;
+      position: absolute;
+      left: -18px;
+      top: -6px;
+    }
+  }
+
+  .modal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 954px;
+    height: 600px;
+    background-color: #fff;
+    padding: 38px 41px 32px 36px;
+
+    &__left {
+      border-right: 1px solid #d4d9dc;
+      padding-right: 12px;
+
+      [class*="searchInput_search"] {
+        width: 406px;
+      }
+
+      .filterList {
+        list-style: none;
+        padding-left: 0;
+        max-height: 400px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: #F4F4F4;
+          border-radius: 100px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #E2E3E3;
+          border-radius: 100px;
+        }
+
+        li {
+          height: 59px;
+          width: 100%;
+          padding: 20px 33px;
+        }
+      }
+    }
+
+    &__right {
+      width: 100%;
+      padding: 0 12px 0 36px;
+      display: flex;
+      flex-direction: column;
+
+      .filterFactors {
+        list-style: none;
+        width: 100%;
+        height: 360px;
+        overflow: auto;
+        padding: 0;
+
+        &::-webkit-scrollbar {
+          width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: #F4F4F4;
+          border-radius: 100px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #E2E3E3;
+          border-radius: 100px;
+        }
+
+        li {
+          width: 100%;
+          height: 60px;
+          padding: 19px 32px;
+
+          &.active {
+            background-color: #FAFBFB;
+          }
+        }
+      }
+
+      input {
+        margin: 0 auto;
+        height: 79px;
+        width: 202px;
+        left: 614px;
+        top: 487px;
+        border-radius: 2px;
+        padding: 30px 60px 30px 60px;
+        background-color: #208CFF;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

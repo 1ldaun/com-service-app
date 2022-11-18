@@ -1,0 +1,42 @@
+.comment {
+  position: relative;
+}
+
+.date {
+  min-width: 160px;
+
+  @media (max-width: 1366px) {
+    min-width: auto;
+  }
+}
+
+.review {
+  text-align: center;
+  opacity: 0.5;
+
+  &.active {
+    color: #087FFF;
+    cursor: pointer;
+  }
+}
+
+.popup {
+  position: absolute;
+  padding: 10px;
+  opacity: 0;
+  width: 200px;
+  min-height: 70px;
+  word-wrap: break-word;
+  bottom: 0;
+  border-radius: 10px;
+  border: 1px solid #e2e3e3;
+  right: 0;
+  background: rgba(250, 251, 251, 0.95);
+  z-index: -1;
+  transition: opacity 1s ease-in-out, z-index 1.05s .05s linear;
+
+  &.active {
+    z-index: 1;
+    opacity: 1;
+  }
+}

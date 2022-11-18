@@ -1,0 +1,134 @@
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: rgba(250, 251, 251, 0.95);
+    padding: 0 172px;
+    margin-bottom: 77px;
+
+    .close {
+      margin: 17px 0 10px 20px;
+      font-size: 14px;
+      opacity: 0.5;
+      cursor: pointer;
+      position: relative;
+      color: #000;
+      text-decoration: none;
+
+      &:visited {
+        color: #000;
+      }
+
+      &:before {
+        display: inline-block;
+        content: '\2039';
+        font-size: 24px;
+        position: absolute;
+        left: -14px;
+        top: -8.5px;
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      line-height: 24px;
+      margin: 0 0 45px 0;
+    }
+    @media (max-width: 1366px) {
+      padding: 0 110px;
+    }
+  }
+
+  .content {
+    padding: 0 172px;
+
+    .info {
+      &__top {
+        display: flex;
+        justify-content: space-between;
+
+        .generalInfo {
+          h2 {
+            font-size: 22px;
+            margin-top: 0;
+          }
+
+          h3 {
+            font-family: "Proxima Nova Rg";
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0;
+            opacity: 0.5;
+            font-weight: 400;
+            margin: 12px 0 8px 0;
+          }
+
+          p {
+            font-family: "Proxima Nova Rg";
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0;
+            margin: 0;
+          }
+        }
+
+        .abnormalBlock {
+          max-width: 400px;
+          border: 1px solid #ff7712;
+          padding: 40px;
+
+          h2 {
+            margin: 0;
+            font-size: 22px;
+          }
+
+          ul {
+            padding-left: 25px;
+            margin: 12px 0 0 0;
+            li {
+              font-size: 18px;
+              &::marker {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      &__bottom {
+        table {
+          width: 100%;
+          th {
+            font-family: "Proxima Nova Rg";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0;
+            text-align: left;
+            opacity: 0.5;
+            padding-right: 30px;
+          }
+
+          td {
+            font-size: 18px;
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1366px) {
+      padding: 0 110px;
+    }
+  }
+}

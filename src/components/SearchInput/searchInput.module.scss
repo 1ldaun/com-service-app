@@ -1,0 +1,26 @@
+.input_wrapper {
+  display: inline-block;
+  position: relative;
+  height: 46px;
+  padding: 1px;
+
+  .search {
+    height: 46px;
+    width: 446px;
+    padding-left: 70px;
+    font-size: 18px;
+  }
+
+  &:before {
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    padding: 0 16px 0 0;
+    content: "";
+    height: 19px;
+    width: 20px;
+    border-right: 1px solid #d4d9dc;
+    background: url("../../../public/img/search.svg") no-repeat;
+  }
+}

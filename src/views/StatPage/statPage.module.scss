@@ -1,0 +1,145 @@
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+
+  .datePicker {
+    height: 45px;
+    width: 250px;
+    background: url("../../../public/img/calendar.svg") no-repeat;
+    background-size: 22px;
+    background-position: 210px;
+    padding: 12.5px 20px;
+    border: 1px solid #d4d9dc;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &__wrapper {
+      width: auto !important;
+    }
+
+    &__day {
+      font-family: "Proxima Nova Rg";
+      font-size: 16px;
+
+      &_selected {
+        font-size: 16px;
+        font-weight: 700 !important;
+        position: relative;
+        background-color: #fff !important;
+        color: #000 !important;
+
+        &:after {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: #ff7712;
+        }
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: rgba(250, 251, 251, 0.95);
+    padding: 0 172px;
+    margin-bottom: 57px;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      line-height: 24px;
+      margin: 45px 0;
+    }
+    @media (max-width: 1366px) {
+      padding: 0 110px;
+    }
+  }
+
+  .content {
+    padding: 0 172px;
+    overflow-x: hidden;
+
+    .graph {
+      display: flex;
+      justify-content: space-between;
+
+      &__right {
+        ul {
+          list-style: none;
+          width: 250px;
+          padding: 0;
+          height: 420px;
+          overflow: auto;
+
+          li {
+            height: 72px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 25px;
+
+            label {
+              font-family: "Proxima Nova Rg";
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px;
+              letter-spacing: 0;
+              opacity: 0.5;
+            }
+
+            select {
+              position: relative;
+              height: 43px;
+              padding: 12px 10px 12px 22px;
+              border: 1px solid #f2f2f2;
+              border-radius: 2px;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+
+    .button__wrapper {
+      margin-bottom: 50px;
+
+      input {
+        font-family: "Proxima Nova Rg";
+        height: 79px;
+        width: 250px;
+        left: 184px;
+        top: 758px;
+        padding: 30px 60px;
+        margin-left: 30px;
+        border: 1px solid #208cff;
+        border-radius: 2px;
+        color: #208cff;
+        cursor: pointer;
+
+        &.button_accent {
+          color: #fff;
+          background-color: #208cff;
+        }
+      }
+    }
+
+    @media (max-width: 1366px) {
+      padding: 0 110px;
+    }
+  }
+}

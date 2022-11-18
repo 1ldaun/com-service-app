@@ -1,0 +1,22 @@
+.requestBlock {
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+
+  .header {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 14px;
+    opacity: 0.5;
+
+    td {
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1200px) {
+      padding: 10px;
+    }
+  }
+}

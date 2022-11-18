@@ -1,0 +1,65 @@
+.date {
+  margin-top: 64px;
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .separator {
+      height: 1px;
+      width: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__close, &__open {
+    p {
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.datePicker {
+  height: 45px;
+  width: 195px;
+  background: url("../../../../public/img/calendar.svg") no-repeat;
+  background-size: 22px;
+  background-position: 160px;
+  padding: 12.5px 20px;
+  border: 1px solid #d4d9dc;
+  font-family: "Proxima Nova Rg";
+  font-size: 16px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__wrapper {
+    width: auto !important;
+  }
+
+  &__day {
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+
+    &_selected {
+      font-size: 16px;
+      font-weight: 700 !important;
+      position: relative;
+      background-color: #fff !important;
+      color: #000 !important;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #ff7712;
+      }
+    }
+  }
+}

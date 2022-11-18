@@ -1,0 +1,128 @@
+.modal__wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FAFBFB;
+  overflow-y: hidden;
+
+  .close {
+    position: absolute;
+    top: 36px;
+    left: 186px;
+    font-size: 14px;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:before {
+      display: inline-block;
+      content: '\2039';
+      font-size: 24px;
+      position: absolute;
+      left: -14px;
+      top: -8.5px;
+    }
+
+    @media (max-width: 1366px) {
+      left: 130px;
+    }
+  }
+
+  .modal {
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      background-color: #fafbfb;
+      padding: 40px 172px 0 172px;
+
+      @media (max-width: 1366px) {
+        padding: 40px 110px 0 110px;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        line-height: 24px;
+
+        &__header {
+          margin: 24px 0 10px 0;
+        }
+
+        &__count {
+          margin: 0;
+          opacity: 0.5;
+        }
+      }
+
+      &__wrapper {
+        display: flex;
+        align-items: center;
+
+        > *:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        margin: 19.5px 0;
+
+        .sort {
+          height: 45px;
+          width: 45px;
+          border: 1px solid #d4d9dc;
+          border-radius: 2px;
+          cursor: pointer;
+          background: url("../../../public/img/sort.svg") no-repeat;
+          background-position: 10px;
+        }
+      }
+    }
+  }
+
+  .requestList {
+    position: absolute;
+    top: 220px;
+    left: 40px;
+    display: inline-block;
+    height: 550px;
+    width: 600px;
+    background-color: #fff;
+    overflow-y: auto;
+
+    .requestBlock {
+      width: 100%;
+      padding: 20px;
+
+      .header {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        align-items: center;
+        padding: 15px 30px;
+        font-size: 14px;
+        opacity: 0.5;
+
+        td {
+          margin: 0 auto;
+        }
+
+        @media (max-width: 1200px) {
+          padding: 10px;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #F4F4F4;
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #E2E3E3;
+      border-radius: 100px;
+    }
+  }
+}
